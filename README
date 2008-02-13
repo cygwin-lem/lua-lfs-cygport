@@ -1,0 +1,57 @@
+lua-filesystem
+------------------------------------------
+LuaFileSystem is a Lua library developed to complement the set of
+functions related to file systems offered by the standard Lua
+distribution.
+
+Runtime requirements:
+  cygwin-1.5.25-7
+  lua-5.1.3-1
+
+Build requirements:
+  binutils-20060817-1
+  cygport-0.3.8-1
+  gcc-core-3.4.4-3
+  make-3.81-1
+
+Canonical website:
+  http://www.keplerproject.org/luafilesystem/
+
+Canonical download:
+  http://luaforge.net/projects/luafilesystem/
+
+-------------------------------------------
+
+Build instructions:
+  unpack lua-filesystem-1.3.0-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./lua-filesystem-1.3.0-X.cygport all
+
+This will create:
+  /usr/src/lua-filesystem-1.3.0-X-src.tar.bz2
+  /usr/src/lua-filesystem-1.3.0-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/lib/lua/5.1/lfs.dll
+  /usr/share/doc/lua-filesystem-1.3.0/README
+  /usr/share/doc/lua-filesystem-1.3.0/html/examples.html
+  /usr/share/doc/lua-filesystem-1.3.0/html/index.html
+  /usr/share/doc/lua-filesystem-1.3.0/html/license.html
+  /usr/share/doc/lua-filesystem-1.3.0/html/luafilesystem.png
+  /usr/share/doc/lua-filesystem-1.3.0/html/manual.html
+
+------------------
+
+Port Notes:
+
+----- version 1.3.0-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
