@@ -1,7 +1,7 @@
 inherit lua
 
 NAME="lua-lfs"
-VERSION=1.5.0
+VERSION=1.6.2
 RELEASE=1
 CATEGORY="Lua"
 SUMMARY="Lua file system library"
@@ -10,12 +10,12 @@ functions related to file systems offered by the standard Lua distribution."
 HOMEPAGE="http://www.keplerproject.org/luafilesystem/"
 SRC_URI="https://github.com/downloads/keplerproject/luafilesystem/luafilesystem-${VERSION}.tar.gz"
 SRC_DIR="luafilesystem-${VERSION}"
-PATCH_URI="1.5.0-cygwin.patch"
+PATCH_URI="1.6.2-cygwin.patch"
 
 src_compile() {
 	lndirs
 	cd ${B}
-	cygmake
+	cygmake WARN="${CFLAGS}"
 }
 
 src_test() {
