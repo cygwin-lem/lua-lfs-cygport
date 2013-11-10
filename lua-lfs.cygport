@@ -1,0 +1,33 @@
+inherit lua
+
+NAME="lua-lfs"
+VERSION=1.5.0
+RELEASE=1
+CATEGORY="Lua"
+SUMMARY="Lua file system library"
+DESCRIPTION="LuaFileSystem is a Lua library developed to complement the set of
+functions related to file systems offered by the standard Lua distribution."
+HOMEPAGE="http://www.keplerproject.org/luafilesystem/"
+SRC_URI="https://github.com/downloads/keplerproject/luafilesystem/luafilesystem-${VERSION}.tar.gz"
+SRC_DIR="luafilesystem-${VERSION}"
+PATCH_URI="1.5.0-cygwin.patch"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygmake
+}
+
+src_test() {
+	cd ${B}/src
+	ln -sf lfs.so lfs.dll
+	${LUA} -llfs ../tests/test.lua
+}
+
+src_install() {
+	cd ${B}
+	exeinto ${LUA_LIBDIR}
+	newexe src/lfs.so lfs.dll
+}
+
+HTMLDOCS="doc/us/*"
