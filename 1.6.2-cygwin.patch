@@ -21,12 +21,14 @@
  #endif
  
  #include <lua.h>
-@@ -114,9 +117,13 @@ typedef struct dir_data {
+@@ -114,9 +117,15 @@ typedef struct dir_data {
  #define STAT_FUNC _stati64
  #define LSTAT_FUNC STAT_FUNC
  #else
 +#ifdef __CYGWIN__
-+ #define lfs_setmode(L,file,m)   ((void)L, _setmode(fileno(file), m))
++#define _O_TEXT	O_TEXT
++#define _O_BINARY	O_BINARY
++#define lfs_setmode(L,file,m)   ((void)L, _setmode(fileno(file), m))
 +#else
  #define _O_TEXT               0
  #define _O_BINARY             0

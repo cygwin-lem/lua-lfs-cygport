@@ -2,7 +2,7 @@ inherit lua
 
 NAME="lua-lfs"
 VERSION=1.6.2
-RELEASE=1
+RELEASE=2
 CATEGORY="Lua"
 SUMMARY="Lua file system library"
 DESCRIPTION="LuaFileSystem is a Lua library developed to complement the set of
