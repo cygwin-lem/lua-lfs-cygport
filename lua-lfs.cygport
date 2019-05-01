@@ -1,16 +1,16 @@
 inherit lua
 
 NAME="lua-lfs"
-VERSION=1.6.2
-RELEASE=2
+VERSION=1.7.0.2
+RELEASE=1
 CATEGORY="Lua"
 SUMMARY="Lua file system library"
 DESCRIPTION="LuaFileSystem is a Lua library developed to complement the set of
 functions related to file systems offered by the standard Lua distribution."
 HOMEPAGE="http://www.keplerproject.org/luafilesystem/"
-SRC_URI="https://github.com/downloads/keplerproject/luafilesystem/luafilesystem-${VERSION}.tar.gz"
-SRC_DIR="luafilesystem-${VERSION}"
-PATCH_URI="1.6.2-cygwin.patch"
+SRC_URI="https://github.com/keplerproject/luafilesystem/archive/v${VERSION//./_}/luafilesystem-v${VERSION//./_}.tar.gz"
+SRC_DIR="luafilesystem-${VERSION//./_}"
+PATCH_URI="1.7.0.2-cygwin.patch"
 
 src_compile() {
 	lndirs
