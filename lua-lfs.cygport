@@ -1,6 +1,6 @@
 NAME="lua-lfs"
 VERSION=1.8.0
-RELEASE=1
+RELEASE=10
 CATEGORY="Lua"
 SUMMARY="Lua file system library"
 DESCRIPTION="\
